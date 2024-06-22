@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>K-Electric Bill Calculator</title>
+</head>
+<body>
+    <div class="flex flex-row gap-4 justify-around items-start mt-12 h-screen">
+        <div class="flex flex-col gap-4 justify-center items-center">
+            <div>
+                <label for="unitsConsumed" class="block text-sm font-medium leading-6 text-gray-900">Units Consumed</label>
+                <div class="relative mt-2 rounded-md shadow-sm">
+                    <input type="text" name="unitsConsumed" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="0" />
+                </div>
+            </div>
+            <div>
+                <label for="ratePerUnit" class="block text-sm font-medium leading-6 text-gray-900">Rate Per Unit</label>
+                <div class="relative mt-2 rounded-md shadow-sm">
+                    <input type="text" name="ratePerUnit" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="0.00" />
+                </div>
+            </div>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Calculate
+            </button>
+        </div>
+        <div class="card">
+            <div class="flex flex-col gap-4">
+                <h2>K-Electric Bill</h2>
+                <p>Units Consumed: <b id="unitsDisplay">0</b></p>
+                <p>Rate Per Unit: <b id="rateDisplay">0.00Rs</b></p>
+                <p>Total Bill: <b id="totalBill">0.00Rs</b></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
